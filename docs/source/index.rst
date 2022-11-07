@@ -11,21 +11,21 @@ SCALPEL for characterization of Alternative polyadenylation  at single-cell reso
    :alt: SCALPEL overview
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+
+About The Project
+-----------------
 
 **SCALPEL** is a toolkit for the characterization of Alternative ployadenylation (APA) and the Isoform quantification at single-cell resolution.
 
-Use the `BLANK_README.md` to get started.
 
-
-<!-- GETTING STARTED -->
-## Getting Started
+Getting Started
+---------------
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+Prerequisites
+-------------
 
 [Conda](https://www.anaconda.com/) package tool or [Mamba](https://github.com/mamba-org/mamba) (Fast reiplementation of conda)
 
