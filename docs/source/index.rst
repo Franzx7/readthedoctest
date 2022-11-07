@@ -6,8 +6,8 @@ SCALPEL for characterization of Alternative polyadenylation  at single-cell reso
 
 .. figure:: _static/logo_scalpel.png
    :align: center
-   :width: 300  
-   :height: 300
+   :width: 600  
+   :height: 600
    :alt: SCALPEL overview
 
 
