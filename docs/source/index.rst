@@ -1,7 +1,7 @@
 
 
-SCALPEL: characterization of Alternative polyadenylation  at single-cell resolution
-======================================================================================
+SCALPEL: single-cell APA characterization
+=========================================
 
 
 .. figure:: _static/logo_scalpel.png
