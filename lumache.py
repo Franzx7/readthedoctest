@@ -1,5 +1,5 @@
 """
-Lumache - Python library for cooks and food lovers.
+SCALPEL - Nextflow pipeline for APA charcaterization with single-cell dataset
 """
 
 __version__ = "0.1.0"
