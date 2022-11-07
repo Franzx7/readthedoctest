@@ -50,7 +50,6 @@ Usage
    :caption: Overview
 
    API
-   About scReadSim
 
 .. toctree::
    :maxdepth: 1
