@@ -4,15 +4,11 @@ SCALPEL for characterization of Alternative polyadenylation  at single-cell reso
 ======================================================================================
 
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Dessin_scalpel.svg/1200px-Dessin_scalpel.svg.png" alt="SCALPEL" width="300" height="300">
-  </a>
-</div>
-
-
+.. figure:: _static/logo_scalpel.png
+   :align: center
+   :width: 300  
+   :height: 300
+   :alt: SCALPEL overview
 
 
 <!-- ABOUT THE PROJECT -->
