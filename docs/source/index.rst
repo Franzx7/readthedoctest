@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 
 **Prerequisites**
 
-[Conda](https://www.anaconda.com/) package tool or [Mamba](https://github.com/mamba-org/mamba) (Fast reimplementation of conda)
+Conda<https://www.anaconda.com/> package tool or Mamba<https://github.com/mamba-org/mamba> (Fast reimplementation of conda)
 
 
 **Installation**
