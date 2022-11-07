@@ -32,14 +32,12 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo and enter in the folder
 
-run::
-
+::
    git clone https://github.com/p-CMRC-LAB/SCALPEL.git
 
 2. Enter into the scalpel folder and Install the required packages
 
-run::
-
+::
    conda install -c bioconda -c defaults -c conda-forge --file requirements.txt
 
 Usage
