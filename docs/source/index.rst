@@ -11,7 +11,6 @@ SCALPEL for characterization of Alternative polyadenylation  at single-cell reso
    :alt: SCALPEL overview
 
 
-
 About The Project
 -----------------
 
@@ -24,15 +23,12 @@ Getting Started
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Prerequisites
+**Prerequisites**
 
-[Conda](https://www.anaconda.com/) package tool or [Mamba](https://github.com/mamba-org/mamba) (Fast reiplementation of conda)
+[Conda](https://www.anaconda.com/) package tool or [Mamba](https://github.com/mamba-org/mamba) (Fast reimplementation of conda)
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Installation
+
+**Installation**
 
 1. Clone the repo and enter in the folder
 
