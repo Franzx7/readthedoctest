@@ -1,6 +1,6 @@
 
 
-SCALPEL for characterization of Alternative polyadenylation  at single-cell resolution
+SCALPEL: characterization of Alternative polyadenylation  at single-cell resolution
 ======================================================================================
 
 
