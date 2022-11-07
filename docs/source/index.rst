@@ -24,23 +24,30 @@ Getting Started
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-Prerequisites
--------------
+.. toctree::
+   :maxdepth: 1
+   :caption: Prerequisites
 
 [Conda](https://www.anaconda.com/) package tool or [Mamba](https://github.com/mamba-org/mamba) (Fast reiplementation of conda)
 
-### Installation
+.. toctree::
+   :maxdepth: 1
+   :caption: Installation
 
 1. Clone the repo and enter in the folder
-   ```sh
-   git clone https://github.com/p-CMRC-LAB/SCALPEL.git
-   ```
-2. Enter into the scalpel folder and Install the required packages
-   ```sh
-   conda install -c bioconda -c defaults -c conda-forge --file requirements.txt
-   ```
 
-### Usage
+run::
+
+   git clone https://github.com/p-CMRC-LAB/SCALPEL.git
+
+2. Enter into the scalpel folder and Install the required packages
+
+run::
+
+   conda install -c bioconda -c defaults -c conda-forge --file requirements.txt
+
+Usage
+-----
 
 .. toctree::
    :maxdepth: 1
