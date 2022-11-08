@@ -462,13 +462,18 @@ plots
 
    FeaturePlot(scalpel.seurat.filtered, features = target$gene_tr, order = T)
 
-|image5|
+.. image:: _static/Feature_plot2.png
+  :width: 1200
+  :alt: Feature_plot2
 
 .. code:: r
 
    DotPlot(scalpel.seurat.filtered, features = target$gene_tr, group.by = 'clusters')
 
-|image6|
+.. image:: _static/DotPlot.png
+  :width: 1200
+  :alt: Dotplot
+
 
 .. |image0| image:: SCALPEL_files/figure-markdown_github/Quality%20filtering-1.png
 .. |image1| image:: SCALPEL_files/figure-markdown_github/Quality%20filtering-2.png
