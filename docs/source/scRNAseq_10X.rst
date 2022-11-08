@@ -401,9 +401,9 @@ We can then, visualize differential gene expression
 
 .. code:: r
 
-   suppressPackageStartupMessages(library(Gviz, lib.loc = "~/CEPH/R_PACKAGES/", quietly = T))
-   suppressPackageStartupMessages(library(GenomicRanges, lib.loc = "~/CEPH/R_PACKAGES/", quietly = T))
-   suppressPackageStartupMessages(library(GenomicFeatures, quietly = T))
+   library(Gviz, lib.loc = "~/CEPH/R_PACKAGES/")
+   library(GenomicRanges, lib.loc = "~/CEPH/R_PACKAGES/")
+   library(GenomicFeatures, quietly = T)
 
    output_path = "/CEPH/users/fake/test/"
    samtoolsbin = "/home/fake/.conda/envs/scalpel_env/bin/samtools"
