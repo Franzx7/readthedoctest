@@ -54,4 +54,6 @@ Usage
 .. toctree::
    :maxdepth: 1
    :caption: Tutorials
+   
+   SCALPEL on 10x scRNA-seq<scRNAseq_10X>
 
