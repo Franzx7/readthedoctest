@@ -14,7 +14,7 @@ SCALPEL: single-cell APA characterization
 About The Project
 -----------------
 
-**SCALPEL** is a toolkit for the characterization of Alternative ployadenylation (APA) and the Isoform quantification at single-cell resolution.
+**SCALPEL** is a NextFlow based toolkit for the characterization of Alternative ployadenylation (APA) and the Isoform quantification at single-cell resolution.
 
 
 Getting Started
