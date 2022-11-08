@@ -357,7 +357,7 @@ Differential Isoform characterization
 
 .. code:: r
 
-   #let's look APA differences between the cluster 0 and 2...
+   #let's look APA differences between the cluster 1 and 2...
 
    #Chi2 square test
    #****************
@@ -394,7 +394,7 @@ Differential Isoform characterization
 
 .. image:: _static/Diff_expressed_transcripts.png
   :width: 1200
-  :alt: EI4FE1_table
+  :alt: Diff_transcripts
 
 
 We can then, visualize differential gene expression
@@ -439,14 +439,10 @@ We can then, visualize differential gene expression
    target = RES_TAB_SIGNIF %>% filter(gene == gene_in)
    target
 
-::
+.. image:: _static/target_EI4FE1.png
+  :width: 1200
+  :alt: target EI4FE1
 
-   ##                         X1        X2  gene       p_value p_value.adjusted
-   ## Eif4e***Eif4e-004  97.7781 624.69868 Eif4e 8.141655e-154    1.213921e-150
-   ## Eif4e***Eif4e-005 426.9861  38.80253 Eif4e 8.141655e-154    1.213921e-150
-   ##                             gene_tr transcript
-   ## Eif4e***Eif4e-004 Eif4e***Eif4e-004  Eif4e-004
-   ## Eif4e***Eif4e-005 Eif4e***Eif4e-005  Eif4e-005
 
 plots
 '''''
@@ -456,12 +452,11 @@ plots
    #Coverage Plot
    genome_cover(genome_gr = genome_gr[genome_gr$transcript_name %in% target$transcript], bamfiles = bamfiles, bamnames = bamnames, gene_in = gene_in, sample_sizes = table(cell.info$clusters))
 
-::
 
-   ## [1] "/CEPH/users/fake/test/cluster1.bam"
-   ## [1] "/CEPH/users/fake/test/cluster2.bam"
+.. image:: _static/Coverage.png
+  :width: 1200
+  :alt: Coverage
 
-|image4|
 
 .. code:: r
 
