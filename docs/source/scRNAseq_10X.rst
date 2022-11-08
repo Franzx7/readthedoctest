@@ -301,7 +301,7 @@ Normalization and data reduction
    a + b
 
 .. image:: _static/UMAPs.png
-  :width: 600
+  :width: 1200
   :alt: UMAPs
 
 Isoform quantification by clusters
@@ -340,7 +340,7 @@ Isoform quantification by clusters
    ALL_expression_by_GENE$Eif4e
 
 .. image:: _static/EI4FE1_table.png
-  :width: 600
+  :width: 1200
   :alt: EI4FE1_table
 
 .. code:: r
