@@ -244,9 +244,6 @@ Quality filtering
        ggtitle("nFeature_RNA")
    p0 + p1 + p2
 
-.. image:: _static/
-  :width: 400
-  :alt: Alternative text
 
 .. code:: r
 
@@ -303,7 +300,9 @@ Normalization and data reduction
    b = b + theme_classic(base_size = 10) + ggtitle('SCALPEL')
    a + b
 
-|image2|
+.. image:: _static/UMAPs.png
+  :width: 600
+  :alt: UMAPs
 
 Isoform quantification by clusters
 ''''''''''''''''''''''''''''''''''
@@ -342,14 +341,9 @@ Isoform quantification by clusters
 
 ::
 
-   ##                          X0        X1        X2        X3        X4       X5
-   ## Eif4e***Eif4e-002  29.48981  93.47414  50.00000  0.000000  66.73031  0.00000
-   ## Eif4e***Eif4e-004  98.72109  97.77810 624.69868 20.397419 274.42314  0.00000
-   ## Eif4e***Eif4e-005 177.71097 426.98607  38.80253  7.878973  48.13540 27.65207
-   ##                         X6       X7       X8 only_gene           gene_tr
-   ## Eif4e***Eif4e-002  0.00000 10.00000  0.00000     Eif4e Eif4e***Eif4e-002
-   ## Eif4e***Eif4e-004  1.95500 34.60068  0.00000     Eif4e Eif4e***Eif4e-004
-   ## Eif4e***Eif4e-005 16.26518 42.81832 17.91311     Eif4e Eif4e***Eif4e-005
+.. image:: _static/EI4FE1_table.png
+  :width: 600
+  :alt: EI4FE1_table
 
 .. code:: r
 
