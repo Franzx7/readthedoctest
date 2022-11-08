@@ -35,7 +35,7 @@ html_theme = 'sphinx_rtd_theme'
 epub_show_urls = 'footnote'
 
 html_favicon = '_static/Icon_scReadSim.svg'
-html_logo = "_static/logo_scalpel.png"
+html_logo = "_static/LOGOFichier1.png"
 html_theme_options = {
     "navigation_depth": 1,
     "titles_only": True,
