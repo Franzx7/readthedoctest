@@ -391,30 +391,11 @@ Differential Isoform characterization
    RES_TAB_SIGNIF = RES_TAB_SIGNIF %>% arrange(p_value.adjusted,gene)
    head(RES_TAB_SIGNIF, 10)
 
-::
 
-   ##                              X1        X2    gene       p_value
-   ## Mllt11***Mllt11-001   783.52656  65.94819  Mllt11 8.088863e-157
-   ## Mllt11***Mllt11-003   197.25936 537.70527  Mllt11 8.088863e-157
-   ## Eif4e***Eif4e-004      97.77810 624.69868   Eif4e 8.141655e-154
-   ## Eif4e***Eif4e-005     426.98607  38.80253   Eif4e 8.141655e-154
-   ## Larp1b***Larp1b-001   798.02548  34.94078  Larp1b 1.705071e-134
-   ## Larp1b***Larp1b-014    25.90343  68.53546  Larp1b 1.705071e-134
-   ## Larp1b***Larp1b-202    60.34789 166.91080  Larp1b 1.705071e-134
-   ## Nkiras2***Nkiras2-001 798.78138  45.01506 Nkiras2 1.607015e-131
-   ## Nkiras2***Nkiras2-002  49.86490 189.81114 Nkiras2 1.607015e-131
-   ## Ccdc91***Ccdc91-001   280.71232  10.00000  Ccdc91 5.692168e-121
-   ##                       p_value.adjusted               gene_tr  transcript
-   ## Mllt11***Mllt11-001      2.412099e-153   Mllt11***Mllt11-001  Mllt11-001
-   ## Mllt11***Mllt11-003      2.412099e-153   Mllt11***Mllt11-003  Mllt11-003
-   ## Eif4e***Eif4e-004        1.213921e-150     Eif4e***Eif4e-004   Eif4e-004
-   ## Eif4e***Eif4e-005        1.213921e-150     Eif4e***Eif4e-005   Eif4e-005
-   ## Larp1b***Larp1b-001      1.452721e-131   Larp1b***Larp1b-001  Larp1b-001
-   ## Larp1b***Larp1b-014      1.452721e-131   Larp1b***Larp1b-014  Larp1b-014
-   ## Larp1b***Larp1b-202      1.452721e-131   Larp1b***Larp1b-202  Larp1b-202
-   ## Nkiras2***Nkiras2-001    1.064915e-128 Nkiras2***Nkiras2-001 Nkiras2-001
-   ## Nkiras2***Nkiras2-002    1.064915e-128 Nkiras2***Nkiras2-002 Nkiras2-002
-   ## Ccdc91***Ccdc91-001      3.086190e-118   Ccdc91***Ccdc91-001  Ccdc91-001
+.. image:: _static/Diff_expressed_transcripts.png
+  :width: 1200
+  :alt: EI4FE1_table
+
 
 We can then, visualize differential gene expression
 
