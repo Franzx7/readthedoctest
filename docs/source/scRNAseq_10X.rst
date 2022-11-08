@@ -244,7 +244,7 @@ Quality filtering
        ggtitle("nFeature_RNA")
    p0 + p1 + p2
 
-.. image:: _static/logo_scalpel.png
+.. image:: _static/
   :width: 400
   :alt: Alternative text
 
