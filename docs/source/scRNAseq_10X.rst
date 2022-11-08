@@ -323,11 +323,7 @@ Isoform quantification by clusters
    #Matrix of counts
    scalpel.seurat.filtered = ScaleData(scalpel.seurat.filtered, features = genes_tr_tab_filtered1$gene_transcript, do.center = F)
 
-::
-
-   ## Scaling data matrix
-
-.. code:: r
+   ##Scaling data matrix
 
    ALL_expression = AggregateExpression(scalpel.seurat.filtered, features = genes_tr_tab_filtered1$gene_transcript,
                                         assays = 'RNA', group.by = 'clusters', verbose = T, slot = 'scale')$RNA %>% data.frame()
@@ -349,7 +345,12 @@ Isoform quantification by clusters
      FeaturePlot(scalpel.seurat.filtered, features = x, pt.size = 0.1, order = T) + theme_classic(base_size = 6)
    })) + plot_layout(ncol = 3)
 
-|image3|
+
+.. image:: _static/Feature_plots.png
+  :width: 1200
+  :alt: EI4FE1_table
+
+
 
 Differential Isoform characterization
 '''''''''''''''''''''''''''''''''''''
