@@ -293,7 +293,7 @@ Normalization and data reduction
    scalpel.seurat.filtered$cell_barcodes = rownames(scalpel.seurat.filtered@meta.data)
    scalpel.seurat.filtered$clusters =  (left_join(scalpel.seurat.filtered@meta.data, metadata, by = "cell_barcodes"))$clusters
 
-   #visualizatopm
+   #visualization
    a = DimPlot(scalpel.seurat.filtered, group.by = 'orig.ident', label = F, pt.size = 0.3, label.size = 10)
    a = a + theme_classic(base_size = 10) + ggtitle('SCALPEL')
    b = DimPlot(scalpel.seurat.filtered, group.by = 'clusters', label = F, pt.size = 0.3, label.size = 10)
@@ -338,8 +338,6 @@ Isoform quantification by clusters
 
    #Ex: Eif4e
    ALL_expression_by_GENE$Eif4e
-
-::
 
 .. image:: _static/EI4FE1_table.png
   :width: 600
