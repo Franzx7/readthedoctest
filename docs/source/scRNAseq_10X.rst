@@ -56,10 +56,10 @@ Internal priming reference file
 For the usage of SCALPEL, it is required to provide IP_REFERENCE_file
 which reference all the internal priming positions.
 
-`IP_REFERENCE_FILE <https://drive.bio.idibell.cat/index.php/s/kM8JdXFsiNmtPcR>`__
+`IP_REFERENCE_FILE <https://drive.bio.idibell.cat/index.php/s/EBMmiBGCEWBdmE7>`__
 (HUMAN)
 
-`IP_REFERENCE_FILE <https://drive.bio.idibell.cat/index.php/s/tcCNkfGxH3saXTg>`__
+`IP_REFERENCE_FILE <https://drive.bio.idibell.cat/index.php/s/JaaYDaffZHWbiWn>`__
 (MOUSE)
 
 Reference genome files
