@@ -187,24 +187,23 @@ files is generated during the execution.
 
 
 Results
-------
+-------
 
-During the Nextflow execution or at the end, an image file
-(BINS_PROB.txt) showing the distribution of the fragments in the
-transcriptomic space is generated in the
-**scalpel_results/reads/probability.** Eventually, depending of the
-experiment, the [–gene_fraction] and [–dt_threshold] can be modified in
-order to get a good fit between the fragment counts distribution and the
-empiric distribution (reads counts by intervals).
+During the Nextflow execution or at the end, an image file (BINS_PROB.jpeg) showing the distribution of the fragments in the transcriptomic space is generated in the **scalpel_results/reads/probability**. Depending of the experiment, the **[–gene_fraction]** and   **[–dt_threshold]** can be modified in order to get a good fit between the fragment counts distribution and the empiric distribution (reads counts by intervals).
+This file is located in **scalpel_results/reads/probability/BINS_PROB.jpeg**.
+
+.. image:: _static/UMAPs.png
+  :width: 1200
+  :alt: UMAPs
 
 Single-cell Analysis of quantified Isoforms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We used `Seurat <https://satijalab.org/seurat/>`__ tool for the single
 cell analysis and APA characterization.
 
 Processing of the SCALPEL DGE count files
-'''''''''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: r
 
