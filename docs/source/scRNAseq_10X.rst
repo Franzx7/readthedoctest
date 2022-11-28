@@ -88,41 +88,39 @@ preprocessing
 
 ::
 
-   > nextflow run -resume ~/CEPH/projects/scalpel/preprocessing_scalpel.nf --help
+   N E X T F L O W  ~  version 22.10.1
+   Launching `SCALPEL/preprocessing_scalpel.nf` [crazy_faggin] DSL1 - revision: 7df54d07e6
+	===============================
+	SCALPEL - N F   P I P E L I N E
+	===============================
 
-   N E X T F L O W  ~  version 21.10.6
-   Launching `/home/fake/CEPH/projects/scalpel/preprocessing_scalpel.nf` [special_shockley] - revision: 100143e896
-   "
-       ===============================
-       SCALPEL - N F   P I P E L I N E
-       ===============================
+	Execution:
+	- In case of providing 10X cell ranger folder:
+	usage: nextflow run -resume SCALPEL/preprocessing_scalpel.nf --sample_names <SAMPLE1,SAMPLE2,...>  --folder_in <FASTQ_FOLDER_PATH> --reference_fasta_transcript <REF_FASTA>
 
-       Execution:
-       - In case of providing 10X cell ranger folder:
-       usage: nextflow run -resume SCALPEL/preprocessing_scalpel.nf --sample_names <SAMPLE1,SAMPLE2,...>  --folder_in <FASTQ_FOLDER_PATH> --reference_fasta_transcript <REF_FASTA>
+	Output options:
+	--sample_names,						Name of the samples to process (same as the FASTQ file names) [required]
+	--folder_in,						Path to FASTQ files folder [required]
+	--reference_fasta_transcript				Reference FASTA transcript file [required]
+	--salmon_index,						Path of salmon index (optional) -- will skip the salmon index processing task
 
-       Output options:
-       --sample_names,                     Name of the samples to process (same as the FASTQ file names) [required]
-       --folder_in,                        Path to FASTQ files folder [required]
-       --reference_fasta_transcript        Reference FASTA transcript file [required]
-       --
+	[--python_bin_path] (optional)				Path to Python bin (default: python3)
+	[--salmon_path_bin] (optional)				Path to Salmon bin (default: salmon)
+	[--publish_rep] (optional)				Publishing repository (default: preprocessing)
+	[--salmon_quant_library_type] (optional)		(default: A)
+	[--salmon_quant_threads] (optional)			(default: 10)
+	[--cpu_defined] (optional)				(default: 24)
+	--tagR1							(default: R1)
+	--tagR2							(default: R2)
 
-       [--python_bin_path] (optional)              Path to Python bin (default: python3)
-       [--salmon_path_bin] (optional)              Path to Salmon bin (default: salmon)
-       [--publish_rep] (optional)                  Publishing repository (default: preprocessing)
-       [--salmon_quant_library_type] (optional)    (default: A)
-       [--salmon_quant_threads]                    (default: 10)
-       [--cpu_defined]                             (default: 24)
-
-and run the preprocessing of FASTQ files
+Be careful that the sample name provided in this command match the sample name of the FASTQ file (Ex: SRR6129051)
 
 ::
 
    > tar -xf FASTQs.tar.gz
-   > nextflow run -resume SCALPEL/preprocessing_scalpel.nf --sample_names SRR6129051_S1_L001 --folder_in FASTQs/ --reference_fasta_transcript ~/CEPH/datas/mm10/gencode.vM10.transcripts.fa
+   > nextflow run -resume SCALPEL/preprocessing_scalpel.nf --sample_names SRR6129051 --folder_in <EXTRACTED_FASTQ_FOLDER_PATH> -- reference_fasta_transcript <REF_FASTA_PATH>
 
-A file named *quant.filtered* is generated (by default into a
-**preprocessing** folder) and will be used later by SCALPEL.
+A file named *quant.filtered* is generated (by default into a **preprocessing** folder) and will be used later by Scalpel.
 
 Scalpel execution
 ~~~~~~~~~~~~~~~~~
@@ -137,44 +135,44 @@ command
    N E X T F L O W  ~  version 21.10.6
    Launching `scalpel.nf` [distracted_avogadro] - revision: 0acac734d0
    "
-       ===============================
-       SCALPEL - N F   P I P E L I N E
-       ===============================
+      ===============================
+      SCALPEL - N F   P I P E L I N E
+      ===============================
 
-       Execution:
-       - In case of providing 10X cell ranger folder:
-       usage: nextflow run -resume scalpel.nf --sequencing <chromium> --folder_in <10X_folder> --annot <genome_annotation_reference> --ipdb <internal_priming_ref_file> --quant_file <salmon_preprocessed_file>
+      Execution:
+      - In case of providing 10X cell ranger folder:
+      usage: nextflow run -resume scalpel.nf --sequencing <chromium> --folder_in <10X_folder> --annot <genome_annotation_reference> --ipdb <internal_priming_ref_file> --quant_file <salmon_preprocessed_file>
 
-       - If providing Dropseq files or Others:
-       usage: nextflow run -resume scalpel.nf --sequencing <dropseq> --bam <BAM> --bai <BAI> --dge_matrix <DGE> --barcodes <barcodes> --annot <genome_annotation_reference> --ipdb <internal_priming_ref_file> --quant_file <salmon_preprocessed_file>
+      - If providing Dropseq files or Others:
+      usage: nextflow run -resume scalpel.nf --sequencing <dropseq> --bam <BAM> --bai <BAI> --dge_matrix <DGE> --barcodes <barcodes> --annot <genome_annotation_reference> --ipdb <internal_priming_ref_file> --quant_file <salmon_preprocessed_file>
 
-       Output options:
-       --folder_in,                                Path to 10X Cellranger results folder [required if 10X file analysis]
-       --bam,                                      Path to indexed BAM file [required]
-       --bai,                                      Path to BAM index file  [required]
-       --dge_matrix,                               Path to DGE count matrix file [required]
-       --quant_file,                               Path to salmon quantification file from preprocessing [required]
-       --ipdb,                                     Path to internal priming reference annotation file [required]
-       --barcodes,                                 Path to file containing valid barcodes [required]
-       --annot,                                    Path to genomic annotation reference file [required]
-       --sequencing,                               Sequencing type [chromium,dropseq]
+      Output options:
+      --folder_in,						Path to 10X Cellranger results folder [required if 10X file analysis]
+      --bam,							Path to indexed BAM file [required]
+      --bai,							Path to BAM index file	[required]
+      --dge_matrix,						Path to DGE count matrix file [required]
+      --quant_file,						Path to salmon quantification file from preprocessing [required]
+      --ipdb, 						Path to internal priming reference annotation file [required]
+      --barcodes,						Path to file containing valid barcodes [required]
+      --annot,						Path to genomic annotation reference file [required]
+      --sequencing,						Sequencing type [chromium,dropseq]
 
-       [--dt_threshold] (optional),                Transcriptomic distance threshold
-       [--dt_exon_end_threshold] (optional)        Transcriptomic end distance threhsold
-       [--cpu_defined] (optional)                  Max cpus (default, 50)
-       [--subsampling]                             BAM file subsampling threshold (default 1, select all reads)
-       [--mapq]                                    have mapping quality >= INT
-       [--gene_fraction]                           theshold fraction gene
-       [--binsize]                                 binsize fragment probability
-       [--publish_rep] (optional)                  Publishing repository
-       [--chr_concordance]                         Charachter at add in order to match chromosome name in BAM file and the genome reference annotation file
+      [--dt_threshold] (optional),				Transcriptomic distance threshold
+      [--dt_exon_end_threshold] (optional)			Transcriptomic end distance threhsold
+      [--cpu_defined] (optional)				Max cpus (default, 50)
+      [--subsampling]						BAM file subsampling threshold (default 1, select all reads)
+      [--mapq]						have mapping quality >= INT (default, 0)
+      [--gene_fraction]					theshold fraction gene
+      [--binsize]						binsize fragment probability
+      [--publish_rep] (optional)				Publishing repository
+      [--chr_concordance]					Character at add in order to match chromosome name in BAM file and the genome reference annotation file
 
 The 10X_folder dataset, and the others reference data files are
 extracted, and SCALPEL can be run in this way:
 
 ::
 
-   nextflow run -resume scalpel.nf --sequencing chromium --folder_in 10X_FOLDER --annot REG_GTF --ipdb IP_REFERENCE_FILE --quant_file preprocessing/quant.filtered --chr_concordance chr  --subsampling 0.1
+   nextflow run -resume scalpel.nf --sequencing chromium --folder_in <10X_FOLDER_PATH> --annot <REG_GTF_PATH> --ipdb <IP_REFERENCE_FILE_PATH> --quant_file preprocessing/quant.filtered --subsampling 0.1
 
 the –chr_concordance option is specified in the case than the REF_FTF
 file and the BAM file contain different chromosome names (chr,…), and
@@ -184,8 +182,12 @@ reads for speed purpose in this current vignette (default:1).
 A **scalpel_results** folder containing intermediate and final result
 files is generated during the execution.
 
+**Be careful to delete the work directory containing nextflow temporary files** when scalpel runs all its processs sucessfully and you don't plan to relaunch scalpel with modified parameters. (This folder can fill an high memory physical space depending of the size of input files analyzed)
+
+
+
 Results
-~~~~~~~
+------
 
 During the Nextflow execution or at the end, an image file
 (BINS_PROB.txt) showing the distribution of the fragments in the
