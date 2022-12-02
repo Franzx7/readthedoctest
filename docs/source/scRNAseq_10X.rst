@@ -189,9 +189,9 @@ A **scalpel_results** folder containing intermediate and final result files is g
 
 **Be careful to delete the work directory containing nextflow temporary files** when scalpel runs all its processs sucessfully and you don't plan to relaunch scalpel with modified parameters. (This folder can fill an high memory physical space depending of the size of input files analyzed)
 
-.. image:: _static/Scalpel_run.png
+.. image:: _static/scalpel_run.png
   :width: 1200
-  :alt: Scalpel_run.png
+  :alt: scalpel_run.png
 
 
 Results
@@ -200,9 +200,9 @@ Results
 During the Nextflow execution or at the end, an image file (BINS_PROB.jpeg) showing the distribution of the fragments in the transcriptomic space is generated in the **scalpel_results/reads/probability**. Depending of the experiment, the **[–-gene_fraction]** and   **[–-dt_threshold]** can be modified in order to get a good fit between the fragment counts distribution and the empiric distribution (reads counts by intervals).
 This file is located in **scalpel_results/reads/probability/BINS_PROB.jpeg**.
 
-.. image:: _static/reads_distribution.png
+.. image:: _static/reads_distribution.jpeg
   :width: 1200
-  :alt: reads_distribution.png
+  :alt: reads_distribution.jpeg
 
 Single-cell Analysis of quantified Isoforms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -271,9 +271,9 @@ A second approach could be to simply remove the bad quality cells directly into 
 	Seurat::FeatureScatter(subset(sc.obj1, nCount_RNA < 100e3), feature1 = "nCount_RNA", feature2 = "nFeature_RNA")  + ggtitle("UMI_count x Transcript_count - Filtered")
 
 
-.. image:: _static/quality_filters.png
+.. image:: _static/QC_plots.png
   :width: 1200
-  :alt: quality_filters.png
+  :alt: QC_plots.png
 
 Normalization and data reduction
 ''''''''''''''''''''''''''''''''
@@ -300,9 +300,9 @@ Once the removing of low quality cells is effective into the Seurat object of Tr
 	sc.obj1 = RunTSNE(sc.obj1, dims = 1:pc_choice)
 	DimPlot(sc.obj1, reduction = "tsne", label = T, label.size = 7, pt.size = 0.7, group.by = "ctypes") + theme_classic(base_size = 14)
 
-.. image:: _static/UMAP_clusters.png
+.. image:: _static/UMAP_ctypes.png
   :width: 1200
-  :alt: UMAP_clusters.png
+  :alt: UMAP_ctypes.png
 
 
 Isoform quantification by clusters
@@ -336,9 +336,9 @@ Isoform quantification by clusters
 
 Let's visualize an example of a gene with its different isoform expression (**Eif4e Gene**)
 
-.. image:: _static/EI4FE1_table_new.png
+.. image:: _static/EIF4E_table.png
   :width: 1200
-  :alt: EI4FE1_table_new.png
+  :alt: EIF4E_table.png
 
 
 .. code:: r
@@ -348,9 +348,9 @@ Let's visualize an example of a gene with its different isoform expression (**Ei
    })) + plot_layout(ncol = 3)
 
 
-.. image:: _static/Feature_plots_new.png
+.. image:: _static/EIF14E_featurePlot.png
   :width: 1200
-  :alt: Feature_plots_new.png
+  :alt: EIF14E_featurePlot.png
 
 
 
@@ -399,9 +399,9 @@ Let's visualize some tops differential isoforms expression in the clusters
 	> head(RES_TAB_SIGNIF, 20)
 
 
-.. image:: _static/Diff_expressed_transcripts.png
+.. image:: _static/top_transcripts.png
   :width: 1200
-  :alt: Diff_expressed_transcripts.png
+  :alt: top_transcripts.png
 
 
 Scalpel identied an differential expression of these isoform in the cell types analyzed. We can vizualize the Expression of these isoforms by using the **FeaturePlot** function of Seurat.
@@ -413,9 +413,9 @@ Scalpel identied an differential expression of these isoform in the cell types a
 	})) + plot_layout(ncol = 3)
 
 
-.. image:: _static/Ex_tr.png
+.. image:: _static/Cep57L1_featplot.png
   :width: 1200
-  :alt: Ex_tr.png
+  :alt: Cep57L1_featplot.png
 
 
 Now, let's look for the mapping of the reads in the input BAM file to see if they are in accordance with the quantification performed by scalpel.
@@ -459,7 +459,7 @@ Once the sample BAM file splitted in accordance with the different cell types, w
    genome_cover(genome_gr = genome_gr[genome_gr$transcript_name %in% target$transcript], bamfiles = bamfiles, bamnames = bamnames, gene_in = gene_in, sample_sizes = table(cell.info$clusters))
 
 
-.. image:: _static/Coverage.png
+.. image:: _static/Coverage_2.png
   :width: 1200
-  :alt: Coverage
+  :alt: Coverage_2.png
 
