@@ -454,9 +454,17 @@ Now, let's look for the mapping of the reads in the input BAM file to see if the
 Once the sample BAM file splitted in accordance with the different cell types, we can visualize the coverage of the reads for each cell type and BAM file
 
 .. code:: r
+	
+	#Enter the path of splitted bam file
+	bamfiles = c("CS1.bam","CS2.bam","ES1.bam", "ES2.bam", "RS1.bam", "RS2.bam", "SC1.bam", "SC2.bam")
+	#Attributes names
+	bamnames = c("CS1","CS2","ES1","ES2","RS1","RS2","SC1","SC2")
 
-   #Coverage Plot
-   genome_cover(genome_gr = genome_gr[genome_gr$transcript_name %in% target$transcript], bamfiles = bamfiles, bamnames = bamnames, gene_in = gene_in, sample_sizes = table(cell.info$clusters))
+	gene_in = "Eif4e"
+	target = RES_TAB_SIGNIF %>% filter(gene == gene_in)
+
+	#Coverage Plot
+	genome_cover(genome_gr = genome_gr[genome_gr$transcript_name %in% target$transcript], bamfiles = bamfiles, bamnames = bamnames, gene_in = gene_in, sample_sizes = table(cell.info$clusters))
 
 
 .. image:: _static/Coverage_2.png
