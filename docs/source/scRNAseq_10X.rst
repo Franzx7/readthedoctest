@@ -57,9 +57,9 @@ reads from the published data
 from GEO. The FASTQ files related to the dataset are required too in the
 SCALPEL analysis
 
-`10X_FOLDER <https://drive.bio.idibell.cat/index.php/s/PHgaM8RL6Pq6Np6>`__
+`10X_FOLDER <https://drive.bio.idibell.cat/index.php/s/tQnxyecoiCB5qH2>`__
 
-`FASTQ_FILES <https://drive.bio.idibell.cat/index.php/s/wQwoi7Wk6wrdK2g>`__
+`FASTQ_FILES <https://drive.bio.idibell.cat/index.php/s/painctRPE5jsd6Q>`__
 
 Internal priming reference file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
